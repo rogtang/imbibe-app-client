@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Open Sans",
+    sans-serif;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+  
+  
+  header {
+    padding: 45px 15px;
+    font-family: 'neuton';
+    font-size: 2em
+  }
+
+  h3 {
+    font-family: 'neuton';
+    font-size: 1.5em
+  }
+
+  .landing-container {
+    margin-bottom: 3em;
+  }
+
+ /* .landing-page-header {
+    background-image: url('../images/rows_of_houses_brazil.jpg');
+    background-color: #FAFAFA;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ) url('../images/rows_of_houses_brazil.jpg');
+    color: yellow;
+    opacity: 0.8;
+  }*/
+
+  .landing-page {
+    font-family: 'Crimson Text', serif; 
+    font-size: 1.2em
+  }
+
+  .lp-heading {
+    font-size: 40px;
+  }
+
+  .landing-intro {
+    background-color: gray;
+  }
+
+  .landing-detail {
+
+    background-color: silver;
+  }
+  
+  .one, .two {
+    padding: 15px;
+  }
+  
+  p {
+    margin: 0 auto;
+    max-width: 650px;
+  }
+  
+  p + p {
+    margin-top: 15px;
+  }
+
+  
+
+  /*@media screen and (min-width: 450px) {
+
+    .container {
+      display: flex;
+    }
+
+    p.landing-page.one {
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px;
+      margin-left: 20px;
+    }
+
+    .two {
+      justify-content: center;
+      padding: 0;
+      
+    }
+
+    
+  }*/
