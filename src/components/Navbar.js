@@ -5,26 +5,58 @@ import './Navbar.css'
 
 class Navbar extends Component {
 
-render() {
-  return <>
-    <header>  
-    <div className="appName"><NavLink
-        to='/cocktails'>
-        Imbibe
-      </NavLink></div>
-    
-    <nav className="navigation"> 
-      <ul className="siteNav">
-        <li><NavLink
-        to='/addcocktail'>
-        Add Cocktail
-      </NavLink></li>
-        <li><a href="#logout">Logout</a></li>
-        <li><a href="#signup">Sign Up</a></li>
-      </ul>
+  handleLogoutClick = () => {
+    TokenService.clearAuthToken();
+    window.location.assign('/');
+  }
+  
+  renderLogoutLink() {
+    return (
+      <div className='Header__logged-in'>
+        <NavLink
+          to='/addcocktail'>
+          Add Cocktail
+        </NavLink>
+        <NavLink
+          onClick={this.handleLogoutClick}
+          to='/'>
+          Logout
+        </NavLink>
+      </div>
+    )
+  }
+  
+  renderLoginLink() {
+    return (
+      <div className='Header__not-logged-in'>
+        <NavLink
+          to='/login'>
+          Log in
+        </NavLink>
+        <NavLink
+          to='/register'>
+          Register
+        </NavLink>
+      </div>
+    )
+  }
+  
+  render() {
+    return <>
+      <nav className='Header'>
+        <h1 className="header_link">
+          <NavLink to='/cocktails'>
+            Imbibe
+          </NavLink>
+        </h1>
+        <span className='Header__tagline--wide'>Your cocktail caddy.</span>
+        {TokenService.hasAuthToken()
+          ? this.renderLogoutLink()
+          : this.renderLoginLink()}
       </nav>
-    </header>
-  </>
-}
+  
+      <span className='Header__tagline--narrow'>Your cocktail caddy.</span>
+    </>
+  }
 }
 export default Navbar;

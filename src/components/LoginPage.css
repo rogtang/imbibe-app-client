@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+
+.login {
+  width: 320px;
+  margin: 3em auto;
+  font-family: 'neuton';
+  padding: 20px
+}
+
+.login__form {
+  border-radius: 5px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  
+  font-family: 'Crimson Text', serif; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5em;
+  padding: 10px 20px;
+}
+
+.login__form__credentials {
+  text-align: center;
+}
+
+.login-header {
+  text-align: center;
+}
+
+.login__form__credentials input {
+  display: block;
+  width: 90%;
+  margin: 5px auto;
+}
+
+.login__form__controls {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.login__form__btn {
+  margin-top: 15px;
+  width: 8em;
+}
+
+input, select, textarea { font-size: 100%; }
+
+.test-login-credentials {
+  text-align: center;
+}
+
+input,
+textarea {
+  width: 100%;
+  max-width: 500px;
+}
+
+input[type="number"] {
+  width: 50px;
+}
+
+#login-id {
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .login {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 2em
+  }
+
+  .login__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}

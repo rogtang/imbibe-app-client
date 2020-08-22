@@ -1,64 +1,123 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router";
 import "./EditCocktail.css";
-import { Link } from "react-router-dom";
+import PostsContext from '../contexts/PostsContext';
+import config from '../config';
+import TokenService from '../services/token-service';
 
 
 class EditCocktail extends Component {
-    handleClickCancel = () => {
+  static contextType = PostsContext;
+
+  state = {
+    error: null,
+    id: '',
+    usernotes: '',
+    rating_rating: 1,
+  };
+
+  componentDidMount() {
+    const { post_id } = this.props.match.params
+    fetch(config.API_ENDPOINT + `/drinks/${post_id}`, {
+        method: 'GET',
+        headers: {
+          'authorization': `bearer ${TokenService.getAuthToken()}`,
+        }
+    })
+    .then(res => {
+        if (!res.ok)
+            return res.json().then(error => Promise.reject(error))
+            return res.json()
+    })
+    .then(responseData => {
+        this.setState({
+            id: responseData.id,
+            usernotes: responseData.usernotes,
+            rating: Number(responseData.rating),
+        })
+    })
+    .catch(error => {
+        console.error(error)
+        this.setState({error})
+    })
+  }
+
+  handleChangeUsernotes = e => {
+    this.setState({ usernotes: e.target.value })
+  };
+
+  handleChangeRating = e => {
+    this.setState({ rating: Number(e.target.value) })
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const { post_id } = this.props.match.params
+    //this.state was updated by above handler functions
+    const { id, usernotes, rating } = this.state
+    const newPost = { id, usernotes, rating }
+    fetch(config.API_ENDPOINT + `/drinks/${post_id}`, {
+        method: 'PATCH',
+        body: JSON.stringify(newPost),
+        headers: {
+          'content-type': 'application/json',
+          'authorization': `bearer ${TokenService.getAuthToken()}`,
+        },
+      })
+      .then(res => {
+        if (!res.ok)
+          return res.json().then(error => Promise.reject(error))
+      })
+      .then((res) => {
+          this.resetFields(newPost)
+          this.context.updateDrink(newPost)
+          this.props.history.push('/cocktails')
+      })
+      .catch(error => {
+          console.error(error)
+          this.setState({error})
+      })
+  }
+
+  resetFields = (newFields) => {
+    this.setState({
+      id: newFields.id || '',
+      usernotes: newFields.usernotes || '',
+      rating: Number(newFields.rating) || '',
+    })
+  }
+
+ handleClickCancel = () => {
         this.props.history.push("/cocktails");
       };
     
   render() {
-    
+    const {id, usernotes, rating, error} = this.state
     return (
-      <div className="cocktail-container-detail">
-        <header className="cocktail-item-header">
-          <h2 className="cocktail-item-name">Margarita</h2>
-        </header>
-        <section className="cocktail-item-body">
-          <div>
-            <img
-              src="https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg"
-              alt="Margarita"
-              width="200px"
-              height="200px"
-            />
-            <p>IBA Category: Contemporary Classics</p>
-            <p>Type of glass: Cocktail glass</p>
-            <ul>
-              <li>Ingredient1 : "Tequila" </li>
-              <li>Measure1": "1 1/2 oz "</li>
-              <li>Ingredient2: "Triple sec" </li>
-              <li>Measure2": "1/2 oz " </li>
-              <li>Ingredient3: "Lime juice" </li>
-              <li>Measure3": "1 oz " </li>
-            </ul>
-            <p>
-              Instructions: "Rub the rim of the glass with the lime slice to
-              make the salt stick to it. Take care to moisten only the outer rim
-              and sprinkle the salt on it. The salt should present to the lips
-              of the imbiber and never mix into the cocktail. Shake the other
-              ingredients with ice, then carefully pour into the glass."
-            </p>
-            <div className="form-section">
-            <label htmlFor="cocktail-notes">Add your own notes and thoughts...</label>
-            <textarea id="cocktail-notes" name="cocktail-notes" rows="15" placeholder="Notes go here..."  onChange={this.handleChangeUsernotes}></textarea>
+      <div> 
+        <main role="main">
+      <header>
+        <h1 className='edit-location-header'>Edit Cocktail Details</h1>
+      </header>
+      <section className="edit-post-section">
+        <form id="edit-post" onSubmit={this.handleSubmit}>
+        <div className='EditPost__error' role='alert'>
+            {error && <p>{error.message}</p>}
           </div>
-            <Link to={`/cocktails`}>
-              <button type="button" id={1}>
-                Save
-              </button>
-            </Link>
-
-            <button id={1} type="button" onClick={this.handleDelete}>
-              Delete
-            </button>
-            <button type="button" onClick={this.handleClickCancel}>
-              Cancel
-            </button>
+          <input
+            type='hidden'
+            name='id'
+          />
+          <div className="form-section">
+            <label htmlFor="usernotes">Add your notes:</label>
+            <textarea id="usernotes" name="usernotes" rows="15" placeholder="Notes go here..." value={usernotes || ''} onChange={this.handleChangeUsernotes}></textarea>
           </div>
-        </section>
+          
+          <button type="submit">Submit Changes</button>
+          <button type="button" onClick={this.handleClickCancel}>Cancel</button>
+        </form>
+      </section>
+    </main>
       </div>
     );
   }

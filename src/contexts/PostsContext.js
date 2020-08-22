@@ -1,11 +1,11 @@
 import React from 'react'
 
 const PostsContext = React.createContext({
-  posts: [],
+  drinks: [],
   users: [],
-  addPost: () => {},
-  updatePost: () => {},
-  deletePost: () => {},
+  addDrink: () => {},
+  updateDrink: () => {},
+  deleteDrink: () => {},
 })
 
 export default PostsContext

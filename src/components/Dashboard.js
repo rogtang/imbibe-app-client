@@ -1,62 +1,37 @@
 import React, { Component } from "react";
 import "./Dashboard.css";
-import { Link } from "react-router-dom";
+import CocktailItem from "./CocktailItem";
+import PostsContext from "../contexts/PostsContext";
 
 class Dashboard extends Component {
+  static contextType = PostsContext;
+  static defaultProps = {
+    match: {
+      params: {},
+    },
+    drinks: [],
+  };
+
   render() {
+    const { drinks = [] } = this.context;
     //Dashboard only renders cocktail name, image, classification
 
     return (
       <section className="postsMain">
-          <div className='hero-image'></div>
-          <h1 className="dashboard-heading">Your Cocktails</h1>
-          <div className='Posts__list'>
-          <section>
-            <h2>
-              <h3><Link to={`/cocktails/1`}> Cosmopolitan</Link></h3>
-            </h2>
-            <img
-              src="https://www.bbcgoodfood.com/sites/default/files/recipe/recipe-image/2017/10/cosmopolitan.jpg"
-              alt="Cosmopolitan"
-              width="200px"
-              height="200px"
+        <div className="hero-image"></div>
+        <h1 className="dashboard-heading">Your Cocktails</h1>
+        <ul className="Posts__list" aria-live="polite">
+          {drinks.map((post) => (
+            <CocktailItem
+              key={post.id}
+              id={post.id}
+              strDrink={post.strDrink}
+              strDrinkThumb={post.strDrinkThumb}
+              strCategory={post.strCategory}
+              rating={post.rating}
             />
-            <p>IBA Category: Contemporary Classic</p>
-            <Link to={`/edit/1`}>
-            <button type="button" id={1}>Edit</button></Link>
-            <button>Delete</button>
-          </section>
-          <section>
-            <h2>
-            <h3><Link to={`/cocktails/1`}> {this.props.drinks}</Link></h3>
-            </h2>
-            <img
-              src="https://www.thecocktaildb.com/images/media/drink/lmj2yt1504820500.jpg"
-              alt="Vodka and Tonic"
-              width="200px"
-              height="200px"
-            />
-            <p>IBA Category:</p>
-            <Link to={`/edit/1`}>
-            <button type="button" id={1}>Edit</button></Link>
-            <button>Delete</button>
-          </section>
-          <section>
-            <h2>
-            <h3><Link to={`/cocktails/1`}> Margarita</Link></h3>
-            </h2>
-            <img
-              src="https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg"
-              alt="Margarita"
-              width="200px"
-              height="200px"
-            />
-            <p>IBA Category: Contemporary Classics</p>
-            <Link to={`/edit/1`}>
-            <button type="button" id={1}>Edit</button></Link>
-            <button>Delete</button>
-          </section>
-          </div>
+          ))}
+        </ul>
       </section>
     );
   }

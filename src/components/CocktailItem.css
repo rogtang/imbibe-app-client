@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: #444;
+    text-align: center;
+    line-height: 1.5;
+    min-width: 320px;
+  }
+  
+  header {
+    padding: 45px 15px;
+    text-align: center;
+  }
+  
+  .cocktail-item-name {
+    font-size: 36px;
+  }
+  
+  .cocktail-item-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: .5em;
+    padding: 15px;
+  }
+  
+  .cocktail-detail {
+    padding: .5em
+  }
+  
+  .cocktail-rating {
+    padding: .5em
+  }
+  
+  
+  label {
+    display: block;
+  }
+  
+  .form-section {
+    margin-bottom: 30px;
+  }
+  
+  .cocktail-container-detail {
+    font-size: 20px;
+  }
+
+  ul {
+      list-style-type: none;
+      padding: 0;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .cocktail-item-header {
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .cocktail-item-body {
+      
+      padding: 0 2em;
+    }
+
+    .cocktail-image {
+        margin: 0;
+        padding: 0
+    }
+  
+  }
+  

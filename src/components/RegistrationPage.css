@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+
+.register {
+  width: 320px;
+  margin: 3em auto;
+  font-family: 'neuton';
+  padding: 20px
+}
+
+.register__form {
+  border-radius: 5px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  
+  font-family: 'Crimson Text', serif; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5em;
+  padding: 10px 20px;
+}
+
+.register-header {
+  text-align: center;
+}
+
+.register__form__credentials {
+  text-align: center;
+}
+
+.register__form__credentials input {
+  display: block;
+  width: 90%;
+  margin: 5px auto;
+}
+
+.register__form__controls {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.register__form__btn {
+  margin-top: 15px;
+  width: 8em;
+}
+
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
+input,
+textarea {
+  width: 100%;
+  max-width: 500px;
+}
+
+input[type="number"] {
+  width: 50px;
+}
+
+#register-id {
+  margin: 0 auto;
+}
+
+
+@media screen and (min-width: 450px) {
+  .register {
+    width: 500px;
+    margin: 20px auto;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 2.5em
+  }
+
+  .register__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

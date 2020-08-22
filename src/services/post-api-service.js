@@ -2,8 +2,8 @@ import TokenService from './token-service'
 import config from '../config'
 
 const PostApiService = {
-  getPosts() {
-    return fetch(`${config.API_ENDPOINT}/posts`, {
+  getDrinks() {
+    return fetch(`${config.API_ENDPOINT}/drinks`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
@@ -15,22 +15,17 @@ const PostApiService = {
       )
   },
 
-  postPost(name, url, address, usernotes, price_rating, size_rating, location_rating) {
-    return fetch(`${config.API_ENDPOINT}/posts`, {
-      method: 'POST',
+
+  searchDrink(search_drink) {
+    return fetch(`${config.API_ENDPOINT}/drinks/search/${search_drink}`, {
+      method: 'GET',
       headers: {
         'content-type': 'application/json',
         'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
-      body: JSON.stringify({
-        name,
-        url,
-        address,
-        usernotes,
-        price_rating,
-        size_rating,
-        location_rating
-      }),
+ /*     body: JSON.stringify({
+        search_drink
+      }),*/
     })
       .then(res =>
         (!res.ok)
@@ -40,7 +35,7 @@ const PostApiService = {
   },
 
   deletePost(post_id) {
-    return fetch(`${config.API_ENDPOINT}/posts/${post_id}`, {
+    return fetch(`${config.API_ENDPOINT}/drinks/${post_id}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',

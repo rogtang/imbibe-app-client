@@ -1,114 +1,122 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Open Sans';
-    color:  blue;
-    text-align: center;
-    line-height: 1.5;
-  }
-  
-  .appName {
-    font-weight: bold;
-    font-size: 10px;
-    margin-bottom: 40px;
-    color: black;
-  }
-  
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-  }
-  
-  li {
-    width: 100px;
-    height: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 25px;
-  
+@import url("https://fonts.googleapis.com/css2?family=Neuton:wght@700&display=swap");
+
+.Header {
+  height: 40px;
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.747);
+}
+
+.header_link {
+  margin: 0;
+  margin-left: 20px;
+  font-family: "neuton";
+}
+
+.Header a {
+  color: white;
+  text-decoration: none;
+}
+
+.Header__tagline--wide {
+  opacity: 0.75;
+  display: none;
+}
+
+.Header__tagline--narrow {
+  opacity: 0.85;
+  text-align: center;
+  display: none;
+  margin-top: 10px;
+}
+
+.Header__not-logged-in {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Header__not-logged-in a:last-child {
+  background: red;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+
+.Header__logged-in {
+  font-size: 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Header__logged-in a {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+.Header__logged-in a:first-child {
+  background: red;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 450px) {
+  .Header h1 {
+    font-size: 22pt;
   }
 
-  .siteNav {
-    font-size: .75em;
+  .Header__not-logged-in a:last-child {
+    margin-right: 20px;
+    margin-left: 20px;
   }
-  
-  nav,
-  footer {
-    padding: 1% 0;
-    background-color: #aaa;
+
+  .Header__logged-in {
+    font-size: 1.1em;
   }
-  
-  nav {
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 0;
+
+  .Header__logged-in a {
+    margin-right: 20px;
   }
-  
-  header {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    color: blue;
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 490px) {
+  .Header__tagline--wide {
+    display: none;
   }
-  
-  section {
-    min-height: 200px;
-    padding: 30px 15px;
-    background-color: #bbb;
+}
+
+@media only screen and (min-width: 768px) {
+  .Header {
+    height: 55px;
   }
-  
-  
-  p {
-    margin: 0 auto;
-    max-width: 650px;
+
+  .header_link {
+    padding-top: 0.2em;
   }
-  
-  p + p {
-    margin-top: 15px;
+
+  .Header__not-logged-in a:last-child {
+    padding: 10px 15px;
   }
-  
-  
-  @media only screen and (min-width: 768px) {
-    body {
-      padding: 5px 5px 0 5px;
-    }
-    
-    header {
-      flex-direction: row;
-      justify-content: space-between;
-      padding-top: 20px;
-    }
-  
-    .appName {
-      font-size: 1em;
-      margin-top: -10px;
-    }
-  
-    .siteNav > li {
-      margin-right: 45px;
-    }
-  
-    ul {
-     flex-direction: row;
-     justify-content: center;
-    }
-  
-    li {
-    margin-top: 0;
-    margin-bottom: 0;
-    }
-  
-    
+}
+
+@media only screen and (min-width: 1024px) {
+  .Header {
+    height: 60px;
   }
+
+  .header_link {
+    padding-top: 0.4em;
+  }
+
+  .Header__tagline--narrow {
+    margin-left: 1em;
+    margin-top: 0.5em;
+    color: red;
+  }
+}

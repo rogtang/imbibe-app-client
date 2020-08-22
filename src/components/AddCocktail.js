@@ -1,40 +1,38 @@
 import React, { Component } from "react";
 import "./AddCocktail.css";
 import { withRouter } from "react-router";
+import PostsContext from '../contexts/PostsContext';
+import PostApiService from '../services/post-api-service';
 
 class AddCocktail extends Component {
+
+  static contextType = PostsContext;
+
+  static defaultProps = {
+    onAddPost: () => { }
+};
+
   handleSubmit = e => {
     e.preventDefault()
     const {cocktail_name} = e.target
     const post = {
-      cocktail_name: cocktail_name.value,
+      search_drink: cocktail_name.value,
     }
 
-    const url = `https://the-cocktail-db.p.rapidapi.com/search.php?s=${post.cocktail_name}`;
-    console.log(url)
-    fetch(url, {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
-    "x-rapidapi-key": "02f452b098mshbeb1a53ff5f47a7p129c48jsnb1cb78d3a166",
-    "Content-Type": "application/json",
-	}
-})
-.then(res => {
-  if(!res.ok) {
-    throw new Error('Sorry, cocktail could not be found in database. Please try another search.');
-  }
-  return res.json();
-})
-.then(response => {
-	console.log(response.drinks[0]);
+    PostApiService.searchDrink(post.search_drink)
+    .then(data => {
+      console.log(data)
+      cocktail_name.value = ''
+      this.context.addDrink(data)
+      this.props.history.push('/cocktails')
+      //window.location.assign('/cocktails');
 })
 .catch(error => {
-	console.log(error);
-});
+  this.setState({ error })
+})
   }  
   
-  handleClickCancel = () => {
+handleClickCancel = () => {
     this.props.history.push("/cocktails");
   };
 

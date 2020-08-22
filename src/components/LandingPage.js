@@ -9,7 +9,7 @@ class LandingPage extends Component {
         <main role="main">
           <header className="landing-page-header">
             <h1>Imbibe</h1>
-            <h2>Your Portable Cocktail Caddy.</h2>
+            <h2>Your Personal Cocktail Caddy.</h2>
           </header>
           <section className="landing-intro">
             <div className="container">

@@ -3,6 +3,7 @@ import CocktailItem from "./CocktailItem";
 import { withRouter } from "react-router";
 import "./CocktailDetail.css";
 import { Link } from "react-router-dom";
+import Rating from "./Rating";
 
 class CocktailDetail extends Component {
   render() {
@@ -21,6 +22,7 @@ class CocktailDetail extends Component {
       strMeasure3,
       strMeasure4,
       notes,
+      rating
     } = this.props;
 */
 
@@ -55,6 +57,9 @@ class CocktailDetail extends Component {
               ingredients with ice, then carefully pour into the glass."
             </p>
             <p> User Notes: Tastes better garnished with lemon or lime. </p>
+            <div className="cocktail-rating">
+                <div>Rating: <Rating value={5}/></div>
+              </div>
             <Link to={`/edit/1`}>
               <button type="button" id={1}>
                 Edit
