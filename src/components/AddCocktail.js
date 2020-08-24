@@ -8,6 +8,10 @@ class AddCocktail extends Component {
 
   static contextType = PostsContext;
 
+  state = {
+    error: null
+  }
+
   static defaultProps = {
     onAddPost: () => { }
 };
@@ -27,8 +31,10 @@ class AddCocktail extends Component {
       this.props.history.push('/cocktails')
       //window.location.assign('/cocktails');
 })
-.catch(error => {
-  this.setState({ error })
+.catch((error) => {
+  console.error(error);
+  this.setState({ error });
+  alert('Sorry, cocktail could not be found in the database. Please try another search.')
 })
   }  
   
@@ -37,6 +43,7 @@ handleClickCancel = () => {
   };
 
   render() {
+    const {error} = this.state
     return (
       <div>
         <header className="add-cocktail-header">
@@ -48,6 +55,9 @@ handleClickCancel = () => {
             className="add-cocktail-form"
             onSubmit={e => this.handleSubmit(e)}
           >
+             <div className="EditPost__error" role="alert">
+              {error && <p>{error.message}</p>}
+            </div>
             <div className="form-section">
               <label htmlFor="cocktail_name">Search by name of cocktail</label>
               <input

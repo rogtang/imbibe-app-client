@@ -14,6 +14,8 @@ import PublicOnlyRoute from "./utils/PublicOnlyRoute";
 import PostApiService from "./services/post-api-service";
 import PostsContext from "./contexts/PostsContext";
 
+export const findDrink = (drinks = [], post_id) =>
+  drinks.find((post) => post.id === post_id);
 
 class App extends React.Component {
   
@@ -85,7 +87,7 @@ class App extends React.Component {
             <PrivateRoute exact path={"/cocktails"} component={Dashboard}/>
             <PrivateRoute
                 exact
-                path={"/cocktail/:post_id"}
+                path={"/cocktails/:post_id"}
                 component={CocktailDetail}
               />
               <PrivateRoute exact path={"/addcocktail"} component={AddCocktail} />

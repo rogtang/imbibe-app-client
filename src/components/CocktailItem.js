@@ -44,9 +44,17 @@ handleDelete = e => {
         <section className="cocktail-item-body">
           <div>
             <div className="cocktail-item-body cocktail-image">
-            <img src={strDrinkThumb} alt={strDrink} width="200px" height="200px"/>
+            <img src={strDrinkThumb} alt={strDrink} width="250px" height="250px"/>
             </div>
-            <div className="cocktail-item-body cocktail-detail">IBA Category: {strCategory}</div>
+            <div className="cocktail-item-body cocktail-detail">
+            IBA Tags: {strTags ? this.strTags : ""}
+          </div>
+          <div className="cocktail-item-body cocktail-detail">
+            {strIBA ? this.strIBA : ""}
+          </div>
+          <div className="cocktail-item-body cocktail-detail">
+            IBA Category: {strCategory}
+          </div>
             <div className="cocktail-item-body cocktail-detail">{strGlass}</div>
      <ul className="cocktail-item-body cocktail-ingredients-measurements">
        <li>{strIngredient1} </li>
@@ -64,8 +72,8 @@ handleDelete = e => {
        <li>{strIngredient7}</li>
        <li>{strMeasure7} </li>
      </ul>
-     <div className="cocktail-item-body cocktail-detail">{strInstructions}</div> 
-     <div className="cocktail-item-body cocktail-detail">{usernotes}</div>
+     <div className="cocktail-item-body cocktail-detail">Instructions: {strInstructions}</div> 
+     <div className="cocktail-item-body cocktail-detail">Notes: {usernotes}</div>
     <div className="cocktail-rating">
                 <div>Rating: <Rating value={rating}/></div>
               </div>
