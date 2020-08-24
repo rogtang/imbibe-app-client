@@ -3,14 +3,12 @@ Component Structure:
 - CocktailItem is the info component that is used in Dashboard and CocktailDetail
 
 FIXES:
-FIXED - center cocktail images
 - remove space under each drink in Dashboard
   - add headings/text without rendering in Dashboard (i.e. category, ingredients)
     - need to create a new component for that?
 - how to handle search with no results
   - throw error/alert
-FIXED - when a drink is added or edited, it does not appear on the page unless you refresh the page
-    - connected to serializePost in API server?
+
 
 
 
