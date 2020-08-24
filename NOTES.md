@@ -8,6 +8,7 @@ FIXED - center cocktail images
   - add headings/text without rendering in Dashboard (i.e. category, ingredients)
     - need to create a new component for that?
 - how to handle search with no results
+  - throw error/alert
 FIXED - when a drink is added or edited, it does not appear on the page unless you refresh the page
     - connected to serializePost in API server?
 
