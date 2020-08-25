@@ -248,7 +248,7 @@ class EditCocktail extends Component {
         </header>
 
         <section className="edit-post-section">
-          <div className="cocktail-item-body cocktail-image">
+          <div className="edit-cocktail-item-body cocktail-image">
             <img
               src={strDrinkThumb}
               alt={strDrink}
@@ -256,31 +256,31 @@ class EditCocktail extends Component {
               height="200px"
             />
           </div>
-          <div className="cocktail-item-body cocktail-detail">
-            IBA Tags: {strTags ? this.strTags : ""}
+          <div className="edit-cocktail-item-body cocktail-detail">
+            IBA Tags: {strTags}
           </div>
-          <div className="cocktail-item-body cocktail-detail">
-            {strIBA ? this.strIBA : ""}
+          <div className="edit-cocktail-item-body cocktail-detail">
+            {strIBA}
           </div>
-          <div className="cocktail-item-body cocktail-detail">
+          <div className="edit-cocktail-item-body cocktail-detail">
             IBA Category: {strCategory}
           </div>
-          <div className="cocktail-item-body cocktail-detail">{strGlass}</div>
-          <ul className="cocktail-item-body cocktail-ingredients-measurements">
+          <div className="edit-cocktail-item-body cocktail-detail">{strGlass}</div>
+          <ul className="edit-cocktail-item-body cocktail-ingredients-measurements">
             <li>{strIngredient1} </li>
             <li>{strMeasure1}</li>
             <li>{strIngredient2}</li>
             <li>{strMeasure2} </li>
-            <li>{strIngredient3 || ''}</li>
-            <li>{strMeasure3 || ''} </li>
-            <li>{strIngredient4 || ''}</li>
-            <li>{strMeasure4 || ''} </li>
-            <li>{strIngredient5 || ''}</li>
-            <li>{strMeasure5 || ''} </li>
-            <li>{strIngredient6 || ''}</li>
-            <li>{strMeasure6 || ''}</li>
-            <li>{strIngredient7 || ''}</li>
-            <li>{strMeasure7 || ''} </li>
+            <li>{strIngredient3}</li>
+            <li>{strMeasure3} </li>
+            <li>{strIngredient4 }</li>
+            <li>{strMeasure4} </li>
+            <li>{strIngredient5}</li>
+            <li>{strMeasure5} </li>
+            <li>{strIngredient6}</li>
+            <li>{strMeasure6}</li>
+            <li>{strIngredient7}</li>
+            <li>{strMeasure7} </li>
           </ul>
           <form id="edit-post" onSubmit={this.handleSubmit}>
             <div className="EditPost__error" role="alert">

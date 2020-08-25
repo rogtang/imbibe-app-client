@@ -3,9 +3,7 @@ Component Structure:
 - CocktailItem is the info component that is used in Dashboard and CocktailDetail
 
 FIXES:
-- remove space under each drink in Dashboard
-  - add headings/text without rendering in Dashboard (i.e. category, ingredients)
-    - need to create a new component for that?
+- prevent rendering "null" in cocktail item
 - how to handle search with no results
   - throw error/alert
 

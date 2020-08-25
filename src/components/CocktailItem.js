@@ -29,10 +29,11 @@ handleDelete = e => {
   //const postId = Number(id)
   PostApiService.deletePost(id)
   .then(data => this.context.deleteDrink(+id))
+  this.props.history.push('/cocktails')
 }
 
   render() {
-    const { id, idDrink, strDrink, strTags, strCategory, strIBA, strGlass, strInstructions, strDrinkThumb, strIngredient1, 
+    const { id, strDrink, strTags, strCategory, strIBA, strGlass, strInstructions, strDrinkThumb, strIngredient1, 
         strIngredient2, strIngredient3, strIngredient4, strIngredient5, strIngredient6, strIngredient7, strMeasure1, strMeasure2, 
         strMeasure3, strMeasure4, strMeasure5, strMeasure6, strMeasure7, usernotes, rating } = this.props
 
@@ -47,10 +48,10 @@ handleDelete = e => {
             <img src={strDrinkThumb} alt={strDrink} width="250px" height="250px"/>
             </div>
             <div className="cocktail-item-body cocktail-detail">
-            IBA Tags: {strTags ? this.strTags : ""}
+            IBA Tags: {strTags}
           </div>
           <div className="cocktail-item-body cocktail-detail">
-            {strIBA ? this.strIBA : ""}
+            {strIBA}
           </div>
           <div className="cocktail-item-body cocktail-detail">
             IBA Category: {strCategory}
@@ -69,7 +70,7 @@ handleDelete = e => {
        <li>{strMeasure5} </li>
        <li>{strIngredient6}</li>
        <li>{strMeasure6}</li>
-       <li>{strIngredient7}</li>
+       <li>{(strIngredient7 !== null) ? {strIngredient7} : ""}</li>
        <li>{strMeasure7} </li>
      </ul>
      <div className="cocktail-item-body cocktail-detail">Instructions: {strInstructions}</div> 
