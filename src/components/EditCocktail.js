@@ -216,29 +216,12 @@ class EditCocktail extends Component {
       error,
       id,
       strDrink,
-      strTags,
-      strCategory,
-      strIBA,
-      strGlass,
       strInstructions,
       strDrinkThumb,
-      strIngredient1,
-      strIngredient2,
-      strIngredient3,
-      strIngredient4,
-      strIngredient5,
-      strIngredient6,
-      strIngredient7,
-      strMeasure1,
-      strMeasure2,
-      strMeasure3,
-      strMeasure4,
-      strMeasure5,
-      strMeasure6,
-      strMeasure7,
       usernotes,
       rating,
     } = this.state;
+
     return (
       <div>
         <header>
@@ -256,32 +239,7 @@ class EditCocktail extends Component {
               height="200px"
             />
           </div>
-          <div className="edit-cocktail-item-body cocktail-detail">
-            IBA Tags: {strTags}
-          </div>
-          <div className="edit-cocktail-item-body cocktail-detail">
-            {strIBA}
-          </div>
-          <div className="edit-cocktail-item-body cocktail-detail">
-            IBA Category: {strCategory}
-          </div>
-          <div className="edit-cocktail-item-body cocktail-detail">{strGlass}</div>
-          <ul className="edit-cocktail-item-body cocktail-ingredients-measurements">
-            <li>{strIngredient1} </li>
-            <li>{strMeasure1}</li>
-            <li>{strIngredient2}</li>
-            <li>{strMeasure2} </li>
-            <li>{strIngredient3}</li>
-            <li>{strMeasure3} </li>
-            <li>{strIngredient4 }</li>
-            <li>{strMeasure4} </li>
-            <li>{strIngredient5}</li>
-            <li>{strMeasure5} </li>
-            <li>{strIngredient6}</li>
-            <li>{strMeasure6}</li>
-            <li>{strIngredient7}</li>
-            <li>{strMeasure7} </li>
-          </ul>
+          
           <form id="edit-post" onSubmit={this.handleSubmit}>
             <div className="EditPost__error" role="alert">
               {error && <p>{error.message}</p>}
@@ -321,7 +279,7 @@ class EditCocktail extends Component {
                 min="1"
                 max="5"
                 default="1"
-                value={rating}
+                value={rating || 1}
                 onChange={this.handleChangeRating}
               />
             </div>

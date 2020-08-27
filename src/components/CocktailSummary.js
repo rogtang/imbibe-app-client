@@ -33,6 +33,7 @@ handleDelete = e => {
 
   render() {
     const { id, strDrink, strTags, strCategory, strIBA, strDrinkThumb, rating } = this.props
+    const tags = this.props.strTags ? strTags.split(",").join(", ").replace(/([a-z])([A-Z])/g, '$1 $2') : '';
 
     return (
         <div className="cocktail-container-detail">
@@ -45,7 +46,7 @@ handleDelete = e => {
             <img src={strDrinkThumb} alt={strDrink} width="250px" height="250px"/>
             </div>
             <div className="cocktail-item-body cocktail-detail">
-            IBA Tags: {strTags}
+            IBA Tags: {tags}
           </div>
           <div className="cocktail-item-body cocktail-detail">
             {strIBA}

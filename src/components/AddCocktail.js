@@ -64,7 +64,7 @@ handleClickCancel = () => {
                 id="cocktail_name"
                 type="text"
                 name="cocktail_name"
-                placeholder="Vodka and Tonic"
+                placeholder="Gin and Tonic, Aviation..."
                 required
               />
             </div>

@@ -7,7 +7,23 @@ FIXES:
 - how to handle search with no results
   - throw error/alert
 
+todo: 
+1. fonts
+2. hide elements using this.state
 
+//from Bookmarks-react-client with state branch
+constructor(props) {
+    super(props);
+    this.state = {
+      bookmarks: [],
+      showAddForm: false
+    };
+  }
+const page = this.state.showAddForm
+          ? <AddBookmark />
+          : <BookmarkApp bookmarks={this.state.bookmarks}/>; 
+
+const video = this.state.showVideo ? <ReactVideo/> : '';  ???
 
 
 
