@@ -279,7 +279,7 @@ class EditCocktail extends Component {
                 min="1"
                 max="5"
                 default="1"
-                value={rating || 1}
+                value={rating}
                 onChange={this.handleChangeRating}
               />
             </div>

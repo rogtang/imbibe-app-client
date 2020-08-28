@@ -45,7 +45,7 @@ handleClickCancel = () => {
   render() {
     const {error} = this.state
     return (
-      <div>
+      <div className="add-cocktail-body">
         <header className="add-cocktail-header">
           <h1 className="add-cocktail-header">Search Cocktails</h1>
         </header>

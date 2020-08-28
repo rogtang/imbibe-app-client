@@ -10,6 +10,7 @@ FIXES:
 todo: 
 1. fonts
 2. hide elements using this.state
+3. how to handle api errors in AddCocktail
 
 //from Bookmarks-react-client with state branch
 constructor(props) {

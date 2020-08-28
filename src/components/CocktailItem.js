@@ -94,8 +94,8 @@ class CocktailItem extends Component {
               <img
                 src={strDrinkThumb}
                 alt={strDrink}
-                width="250px"
-                height="250px"
+                width="400px"
+                height="400px"
               />
             </div>
             <div className="cocktail-item-body cocktail-detail">

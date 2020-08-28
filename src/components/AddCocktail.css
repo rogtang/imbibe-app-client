@@ -11,6 +11,21 @@
     min-width: 320px;
   }
   
+  .add-cocktail-body {
+    background-image: url('../images/hanging-glasses.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ) url('../images/hanging-glasses.jpg');
+    color: white;
+    opacity: 1;
+    height: 100%
+  }
+  
   input,
   select,
   textarea {

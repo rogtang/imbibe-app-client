@@ -30,6 +30,7 @@ class LandingPage extends Component {
                 barbershop.
               </p>
             </div>
+            <div className="middle-image"></div>
           </section>
           <section className="landing-detail">
             <header>
@@ -40,13 +41,14 @@ class LandingPage extends Component {
             <p className="landing-page two">
               Use Imbibe to search for cocktails by name and pin them to your
               personal Dashboard so you'll always have a handy list of favorites
-              or new ones you've just heard about to try. From your Dashboard,
-              find the exact ingredients contained in the drink and recipes so
-              you can make them. Add your own notes, reviews or personal twists
-              to each cocktail.
+              or new ones you've just heard about and have to try. From your
+              Dashboard, find the ingredients for each drink and recipes so you
+              can make them. Add your own notes, ratings or personal twists to
+              each cocktail. Watch video tutorials for certain drinks. Get a
+              drink's IBA (International Bartenders Association) information.
             </p>
             <h3>Find A New Favorite Today</h3>
-            <p className="landing-page">
+            <p className="landing-page-links">
               <Link to="/register">Register</Link> for an account or{" "}
               <Link to="/login">login</Link> to demo the site.
             </p>

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Eczar:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:wght@700&family=Spectral:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:wght@500&family=Spectral:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+
 
 * {
     box-sizing: border-box;
@@ -18,12 +20,12 @@
   
   header {
     padding: 45px 15px;
-    font-family: 'Spectral', serif;
+    font-family: 'Arvo', serif;
     font-size: 2em
   }
 
   h3 {
-    font-family: 'Spectral';
+    font-family: 'Arvo';
     font-size: 1.5em
   }
 
@@ -31,8 +33,8 @@
     margin-bottom: 3em;
   }
 
- /* .landing-page-header {
-    background-image: url('../images/rows_of_houses_brazil.jpg');
+ .landing-page-header {
+    background-image: url('../images/bar-mood-lighting.jpg');
     background-color: #FAFAFA;
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,31 +43,59 @@
     linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
-    ) url('../images/rows_of_houses_brazil.jpg');
-    color: yellow;
-    opacity: 0.8;
-  }*/
+    ) url('../images/bar-mood-lighting.jpg');
+    color: white;
+    opacity: 1;
+    height: 20em
+  }
+
+  .middle-image {
+    background-image: url('../images/row-of-cocktails.jpg');
+    background-color: gray;
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ) url('../images/bottles-row.jpg');
+    color: white;
+    opacity: 1;
+    height: 18em;
+  }
 
   .landing-page {
-    font-family: 'Cormorant', serif; 
-    font-size: 1.2em
+    font-family: 'Spectral', serif; 
+    font-size: 1.2em;
+    margin-bottom: 2em
   }
 
   .lp-heading {
     font-size: 40px;
+    margin: 20px 0
   }
 
   .landing-intro {
-    background-color: gray;
+    background-color: whitesmoke;
   }
 
   .landing-detail {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.76);
+  }
 
-    background-color: silver;
+  .landing-page-links a {
+    color: red;
+    font-family: 'Arvo', serif;
+  }
+
+  .landing-page-links {
+    font-family: 'Arvo', serif;
   }
   
   .one, .two {
-    padding: 15px;
+    padding: 10px;
   }
   
   p {
