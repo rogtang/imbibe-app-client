@@ -19,7 +19,7 @@ class Dashboard extends Component {
     return (
       <section className="postsMain">
         <div className="hero-image"></div>
-        <h1 className="dashboard-heading">Your Cocktails</h1>
+        <h1 className="dashboard-heading">Your Cocktail Menu</h1>
         <ul className="Posts__list" aria-live="polite">
           {drinks.map((post) => (
             <CocktailSummary

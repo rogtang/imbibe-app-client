@@ -2,15 +2,9 @@ Component Structure:
 - CocktailDetail is individual cocktail page
 - CocktailItem is the info component that is used in Dashboard and CocktailDetail
 
-FIXES:
-- prevent rendering "null" in cocktail item
-- how to handle search with no results
-  - throw error/alert
 
 todo: 
-1. fonts
-2. hide elements using this.state
-3. how to handle api errors in AddCocktail
+3. how to handle api errors in AddCocktail or searches with no results
 
 //from Bookmarks-react-client with state branch
 constructor(props) {

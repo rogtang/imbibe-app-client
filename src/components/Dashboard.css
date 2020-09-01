@@ -1,76 +1,74 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Open Sans", sans-serif;
-    font-size: 18px;
-    color: #444;
-    text-align: center;
-    line-height: 1.5;
-    background-color: whitesmoke;
-  }
-  
-  .cocktail-item-header {
-    padding: 45px 15px 5px 15px;
-  }
+  box-sizing: border-box;
+}
 
-  img {
-    margin: 0 auto;
-  }
-  
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #444;
+  text-align: center;
+  line-height: 1.5;
+  background-color: whitesmoke;
+}
+
+.cocktail-item-header {
+  padding: 45px 15px 5px 15px;
+}
+
+img {
+  margin: 0 auto;
+}
+
+.Posts__list {
+  font-size: 18px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Spectral", serif;
+}
+
+.cocktail-item-body.cocktail-image {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.hero-image {
+  background-image: url("../images/bottles-row.jpg");
+  height: 14em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.dashboard-heading {
+  margin-top: 1em;
+  font-size: 44px;
+  font-family: "Arvo", serif;
+}
+
+.postsMain {
+  margin-bottom: 5em;
+}
+
+@media only screen and (min-width: 768px) {
   .Posts__list {
     font-size: 18px;
-    width: 90%;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
     margin: 0 auto;
+    justify-content: space-around;
+    align-items: stretch;
     padding: 0;
-    font-family: "Spectral", serif;
-  }
-
-  .cocktail-item-body.cocktail-image {
-    padding: 0;
-    margin: 0 auto
-  }
-  
-  .hero-image {
-    background-image: url("../images/bottles-row.jpg");
-    height: 14em;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
   }
 
   .dashboard-heading {
-    margin-top: 1em;
     font-size: 44px;
-    font-family: 'Arvo', serif;
   }
-  
-  .postsMain {
-    margin-bottom: 5em;
-  }
-  
-  
-  @media only screen and (min-width: 768px) {
-    .Posts__list {
-      font-size: 18px;
-      width: 100%;
-      display: flex;
-      flex-flow: row wrap;
-      margin: 0 auto;
-      justify-content: space-around;
-      align-items: stretch;
-      padding: 0;
-    }
-  
-    .dashboard-heading {
-      font-size: 44px;
-    }
-  
-    .hero-image {
-      height: 24em;
-      background-repeat: repeat-x;
+
+  .hero-image {
+    height: 24em;
+    background-repeat: repeat-x;
     background-size: cover;
-    }
   }
-  
+}

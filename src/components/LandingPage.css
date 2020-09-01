@@ -1,115 +1,104 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Eczar:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:wght@500&family=Spectral:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Eczar:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spectral+SC:wght@500&family=Spectral:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
 
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Open Sans",
-    sans-serif;
-    font-size: 18px;
-    text-align: center;
-    line-height: 1.5;
-    max-width: 100%;
-  }
-  
-  
-  header {
-    padding: 45px 15px;
-    font-family: 'Arvo', serif;
-    font-size: 2em
-  }
+  box-sizing: border-box;
+}
 
-  h3 {
-    font-family: 'Arvo';
-    font-size: 1.5em
-  }
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 100%;
+}
 
-  .landing-container {
-    margin-bottom: 3em;
-  }
+header {
+  padding: 45px 15px;
+  font-family: "Arvo", serif;
+  font-size: 2em;
+}
 
- .landing-page-header {
-    background-image: url('../images/bar-mood-lighting.jpg');
-    background-color: #FAFAFA;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ) url('../images/bar-mood-lighting.jpg');
-    color: white;
-    opacity: 1;
-    height: 20em
-  }
+h3 {
+  font-family: "Arvo";
+  font-size: 1.5em;
+}
 
-  .middle-image {
-    background-image: url('../images/row-of-cocktails.jpg');
-    background-color: gray;
-    background-repeat: repeat-x;
-    background-size: contain;
-    background-position: center;
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ) url('../images/bottles-row.jpg');
-    color: white;
-    opacity: 1;
-    height: 18em;
-  }
+.landing-container {
+  margin-bottom: 3em;
+}
 
-  .landing-page {
-    font-family: 'Spectral', serif; 
-    font-size: 1.2em;
-    margin-bottom: 2em
-  }
+.landing-page-header {
+  background-image: url("../images/bar-mood-lighting.jpg");
+  background-color: #fafafa;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+    url("../images/bar-mood-lighting.jpg");
+  color: white;
+  opacity: 1;
+  height: 20em;
+}
 
-  .lp-heading {
-    font-size: 40px;
-    margin: 20px 0
-  }
+.middle-image {
+  background-image: url("../images/row-of-cocktails.jpg");
+  background-color: gray;
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+    url("../images/bottles-row.jpg");
+  color: white;
+  opacity: 1;
+  height: 18em;
+}
 
-  .landing-intro {
-    background-color: whitesmoke;
-  }
+.landing-page {
+  font-family: "Spectral", serif;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
 
-  .landing-detail {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.76);
-  }
+.lp-heading {
+  font-size: 40px;
+  margin: 20px 0;
+}
 
-  .landing-page-links a {
-    color: red;
-    font-family: 'Arvo', serif;
-  }
+.landing-intro {
+  background-color: whitesmoke;
+}
 
-  .landing-page-links {
-    font-family: 'Arvo', serif;
-  }
-  
-  .one, .two {
-    padding: 10px;
-  }
-  
-  p {
-    margin: 0 auto;
-    max-width: 650px;
-  }
-  
-  p + p {
-    margin-top: 15px;
-  }
+.landing-detail {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.76);
+}
 
-  
+.landing-page-links a {
+  color: red;
+  font-family: "Arvo", serif;
+}
 
-  /*@media screen and (min-width: 450px) {
+.landing-page-links {
+  font-family: "Arvo", serif;
+}
+
+.one,
+.two {
+  padding: 10px;
+}
+
+p {
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+p + p {
+  margin-top: 15px;
+}
+
+/*@media screen and (min-width: 450px) {
 
     .container {
       display: flex;

@@ -40,9 +40,9 @@ class LandingPage extends Component {
             </header>
             <p className="landing-page two">
               Use Imbibe to search for cocktails by name and pin them to your
-              personal Dashboard so you'll always have a handy list of favorites
-              or new ones you've just heard about and have to try. From your
-              Dashboard, find the ingredients for each drink and recipes so you
+              personal cocktail menu so you'll always have quick access to a list of favorites
+              or new drinks you've just heard about and have to try. From your
+              menu, find the ingredients for each drink and recipes so you
               can make them. Add your own notes, ratings or personal twists to
               each cocktail. Watch video tutorials for certain drinks. Get a
               drink's IBA (International Bartenders Association) information.

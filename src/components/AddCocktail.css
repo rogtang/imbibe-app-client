@@ -18,10 +18,10 @@
     background-position: center;
     background: 
     linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
     ) url('../images/hanging-glasses.jpg');
-    color: white;
+    color: rgb(208, 255, 0);
     opacity: 1;
     height: 100%
   }
@@ -57,6 +57,9 @@
   
   label {
     display: block;
+    font-family: "Spectral", serif;
+    font-size: 30px;
+    font-weight: bolder;
   }
   
   .form-section {
@@ -77,6 +80,12 @@
   
   #add-cocktail {
     margin: 0 auto;
+  }
+
+  .EditPost__error {
+   color: red;
+   font-weight: 900;
+   font-size: 1.3em
   }
   
   @media only screen and (min-width: 768px) {

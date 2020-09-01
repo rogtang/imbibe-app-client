@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Neuton:wght@700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:wght@700&family=Spectral:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spectral+SC:wght@700&family=Spectral:wght@800&display=swap");
 
 .Header {
   height: 40px;
@@ -34,17 +34,19 @@
 }
 
 .Header__not-logged-in {
+  font-size: 1.1em;
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: flex-end;
+  font-family: Arvo;
 }
 
 .Header__not-logged-in a:last-child {
-  background: red;
+  background: rgb(172, 30, 172);
   color: white;
   padding: 5px 15px;
-  border-radius: 15px;
+  border-radius: 5px;
   margin-left: 10px;
 }
 
@@ -53,19 +55,20 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  font-family: Arvo;
 }
 
 .Header__logged-in a {
   border: 1px solid rgba(0, 0, 0, 0.25);
   padding: 5px 15px;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .Header__logged-in a:first-child {
-  background: red;
+  background: rgb(172, 30, 172);
   color: white;
   padding: 5px 15px;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 450px) {

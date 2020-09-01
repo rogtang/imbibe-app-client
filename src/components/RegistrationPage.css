@@ -1,28 +1,24 @@
-
 .register {
   width: 320px;
   margin: 3em auto;
-  font-family: 'Arvo';
+  font-family: "Arvo";
   padding: 20px;
-    background-image: url('../images/two-cocktails-vertical.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ) url('../images/two-cocktails-vertical.jpg');
-    color: white;
-    opacity: 1;
-    height: 100%
+}
+
+.register-wrapper {
+  background-image: url("../images/row-of-cocktails2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+    url("../images/two-cocktails-vertical.jpg");
+  color: white;
+  opacity: 1;
+  height: 100%;
 }
 
 .register__form {
-  
-  
-  
-  font-family: 'Spectral', serif; 
+  font-family: "Spectral", serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,7 +72,6 @@ input[type="number"] {
   margin: 0 auto;
 }
 
-
 @media screen and (min-width: 450px) {
   .register {
     width: 500px;
@@ -84,7 +79,7 @@ input[type="number"] {
     flex-direction: column;
     justify-content: center;
     margin-top: 3em;
-    margin-bottom: 2.5em
+    margin-bottom: 2.5em;
   }
 
   .register__form {

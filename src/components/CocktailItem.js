@@ -37,7 +37,6 @@ class CocktailItem extends Component {
       strDrink,
       strTags,
       strCategory,
-      strIBA,
       strGlass,
       strInstructions,
       strDrinkThumb,
@@ -60,12 +59,26 @@ class CocktailItem extends Component {
       strVideo,
     } = this.props;
 
+    const ing2 = this.props.strIngredient2 ? <li>{strIngredient2}</li> : "";
+    const meas2 = this.props.strMeasure2 ? <li>{strMeasure2}</li> : "";
+    const ing3 = this.props.strIngredient3 ? <li>{strIngredient3}</li> : "";
+    const meas3 = this.props.strMeasure3 ? <li>{strMeasure3}</li> : "";
+    const ing4 = this.props.strIngredient4 ? <li>{strIngredient4}</li> : "";
+    const meas4 = this.props.strMeasure4 ? <li>{strMeasure4}</li> : "";
+    const ing5 = this.props.strIngredient5 ? <li>{strIngredient5}</li> : "";
+    const meas5 = this.props.strMeasure5 ? <li>{strMeasure5}</li> : "";
+    const ing6 = this.props.strIngredient6 ? <li>{strIngredient6}</li> : "";
+    const meas6 = this.props.strMeasure6 ? <li>{strMeasure6}</li> : "";
+    const ing7 = this.props.strIngredient7 ? <li>{strIngredient7}</li> : "";
+    const meas7 = this.props.strMeasure7 ? <li>{strMeasure7}</li> : "";
+
     const tags = this.props.strTags
       ? strTags
           .split(",")
           .join(", ")
           .replace(/([a-z])([A-Z])/g, "$1 $2")
-      : "";
+      : "None";
+
     const video = this.props.strVideo ? (
       <div className="cocktail-video">
         <ReactPlayer
@@ -80,7 +93,6 @@ class CocktailItem extends Component {
       <p className="hidden">Sorry, no video for this drink is available</p>
     );
 
-
     return (
       <div className="cocktail-container-detail">
         <header className="cocktail-item-header">
@@ -92,46 +104,49 @@ class CocktailItem extends Component {
           <div>
             <div className="cocktail-item-body cocktail-image">
               <img
+                className="img-large"
                 src={strDrinkThumb}
                 alt={strDrink}
-                width="400px"
-                height="400px"
+                width="350px"
+                height="350px"
               />
             </div>
             <div className="cocktail-item-body cocktail-detail">
               IBA Tags: {tags}
             </div>
-            <div className="cocktail-item-body cocktail-detail">{strIBA}</div>
             <div className="cocktail-item-body cocktail-detail">
               IBA Category: {strCategory}
             </div>
-            <div className="cocktail-item-body cocktail-detail">Type of Glass: {strGlass}</div>
-            <div className="cocktail-item-body cocktail-detail">Ingredients:</div>
+            <div className="cocktail-item-body cocktail-detail">
+              Type of Glass: {strGlass}
+            </div>
+            <div className="cocktail-item-body cocktail-detail">
+              Ingredients:
+            </div>
             <ul className="cocktail-item-body cocktail-ingredients-measurements">
               <li>{strIngredient1} </li>
               <li>{strMeasure1}</li>
-              <li>{strIngredient2}</li>
-              <li>{strMeasure2} </li>
-              <li>{strIngredient3}</li>
-              <li>{strMeasure3} </li>
-              <li>{strIngredient4}</li>
-              <li>{strMeasure4} </li>
-              <li>{strIngredient5}</li>
-              <li>{strMeasure5} </li>
-              <li>{strIngredient6}</li>
-              <li>{strMeasure6}</li>
-              <li>{strIngredient7}</li>
-              <li>{strMeasure7} </li>
+              {ing2}
+              {meas2}
+              {ing3}
+              {meas3}
+              {ing4}
+              {meas4}
+              {ing5}
+              {meas5}
+              {ing6}
+              {meas6}
+              {ing7}
+              {meas7}
             </ul>
             <div className="cocktail-item-body cocktail-detail">
-              Instructions: {strInstructions}
+              <strong>Instructions:</strong> {strInstructions}
             </div>
             <div className="cocktail-item-body cocktail-detail">
-              Notes: {usernotes}
+              <strong>Notes:</strong> {usernotes}
             </div>
             <div className="cocktail-item-body cocktail-detail cocktail-rating">
-                Rating: 
-              
+              <strong>Rating:</strong>
             </div>
             <Rating value={rating} />
             {video}

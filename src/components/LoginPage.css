@@ -1,24 +1,24 @@
 .login {
   width: 320px;
   margin: 3em auto;
-  font-family: 'Arvo';
+  font-family: "Arvo";
   padding: 20px;
-  background-image: url('../images/pouring.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ) url('../images/two-cocktails-vertical.jpg');
-    color: white;
-    opacity: 1;
-    height: 100%
+}
+
+.login-wrapper {
+  background-image: url("../images/martini-colorful.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+    url("../images/two-cocktails-vertical.jpg");
+  color: white;
+  opacity: 1;
+  height: 100%;
 }
 
 .login__form {
-  font-family: 'Spectral', serif; 
+  font-family: "Spectral", serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,7 +52,11 @@
   width: 8em;
 }
 
-input, select, textarea { font-size: 100%; }
+input,
+select,
+textarea {
+  font-size: 100%;
+}
 
 .test-login-credentials {
   text-align: center;
@@ -77,7 +81,7 @@ input[type="number"] {
     flex-direction: column;
     justify-content: center;
     margin-top: 3em;
-    margin-bottom: 2em
+    margin-bottom: 2em;
   }
 
   .login__form {
@@ -85,5 +89,4 @@ input[type="number"] {
     flex-direction: column;
     justify-content: center;
   }
-
 }

@@ -225,7 +225,7 @@ class EditCocktail extends Component {
     return (
       <div>
         <header>
-          <h2 className='edit-cocktail-header'>
+          <h2 className="edit-cocktail-header">
             Edit <Link to={`/cocktails/${id}`}> {strDrink}</Link>
           </h2>
         </header>
@@ -239,7 +239,7 @@ class EditCocktail extends Component {
               height="200px"
             />
           </div>
-          
+
           <form id="edit-post" onSubmit={this.handleSubmit}>
             <div className="EditPost__error" role="alert">
               {error && <p>{error.message}</p>}
