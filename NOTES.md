@@ -4,7 +4,7 @@ Component Structure:
 
 
 todo: 
-3. how to handle api errors in AddCocktail or searches with no results
+3. if drinkID already exists in table, don't use addDrink (line29) context to render in DOM
 
 //from Bookmarks-react-client with state branch
 constructor(props) {

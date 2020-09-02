@@ -15,13 +15,16 @@ NOTE: the Dashboard will only display that specific user's posts.
 ## Screenshots
 
 - Landing Page:
-  ![Landing page](src/screenshots/homely_landing_page_register_small.png)
-- Dashboard:
-  ![Dashboard](src/screenshots/homely_dashboard_small.png)
-- User Post:
-  ![User Post](src/screenshots/homely_postdetails.png)
-- Adding a Location:
-  ![Add Post](src/screenshots/homely_addpost_small.png)
+  ![Landing page](src/screenshots/imbibe-lp.png)
+  ![Landing page](src/screenshots/imbibe-lp2.png)
+- Dashboard/Menu:
+  ![Dashboard/Menu](src/screenshots/imbibe-menu-crop.png)
+  ![Dashboard/Menu](src/screenshots/imbibe-menu-2.png)
+- Cocktail Info:
+  ![Cocktail](src/screenshots/imbibe-drink.png)
+  ![Cocktail](src/screenshots/imbibe-drink-bottom.png)
+- Adding a Cocktail:
+  ![Add Cocktail](src/screenshots/imbibe-add-cocktail.png)
 
 ## Built With (Client-side):
 

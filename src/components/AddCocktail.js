@@ -28,7 +28,6 @@ class AddCocktail extends Component {
         cocktail_name.value = "";
         this.context.addDrink(data);
         this.props.history.push("/cocktails");
-        //window.location.assign('/cocktails');
       })
       .catch((error) => {
         console.error(error);
