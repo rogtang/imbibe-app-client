@@ -15,24 +15,23 @@ class AddCocktail extends Component {
     onAddPost: () => {},
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
     const { cocktail_name } = e.target;
     const post = {
       search_drink: cocktail_name.value,
     };
 
-    PostApiService.searchDrink(post.search_drink)
-      .then((data) => {
-        console.log(data);
-        cocktail_name.value = "";
-        this.context.addDrink(data);
-        this.props.history.push("/cocktails");
-      })
-      .catch((error) => {
-        console.error(error);
-        this.setState({ error });
-      });
+    try {
+      const newDrink = await PostApiService.searchDrink(post.search_drink);
+      const allDrinks = await PostApiService.getDrinks();
+      cocktail_name.value = "";
+      this.context.setDrinks(allDrinks);
+      this.props.history.push(`/cocktails/${newDrink.id}`);
+    } catch (error) {
+      console.error(error);
+      this.setState({ error });
+    }
   };
 
   handleClickCancel = () => {
@@ -69,10 +68,10 @@ class AddCocktail extends Component {
           </form>
         </section>
         <div className="EditPost__error" role="alert">
-              {error && (
-                <p>Sorry, we couldn't find that cocktail. Please try again.</p>
-              )}
-            </div>
+          {error && (
+            <p>Sorry, we couldn't find that cocktail. Please try again.</p>
+          )}
+        </div>
       </div>
     );
   }

@@ -32,11 +32,11 @@ class App extends React.Component {
     });
   };
 
-  addDrink = (drink) => {
+  /*addDrink = (drink) => {
     this.setState({
       drinks: [...this.state.drinks, drink],
     });
-  };
+  };*/
 
   updateDrink = (updatedDrink) => {
     const newDrink = this.state.drinks.map((drink) =>
@@ -65,7 +65,7 @@ class App extends React.Component {
   render() {
     const value = {
       drinks: this.state.drinks,
-      addDrink: this.addDrink,
+      setDrinks: this.setDrinks,
       deleteDrink: this.deleteDrink,
       updateDrink: this.updateDrink,
     };
