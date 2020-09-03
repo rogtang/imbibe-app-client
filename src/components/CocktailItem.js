@@ -86,6 +86,7 @@ class CocktailItem extends Component {
           width="100%"
           height="100%"
           className="react-player"
+          origin = 'https://imbibe.vercel.app'
           controls
         />
       </div>

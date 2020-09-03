@@ -1,3 +1,14 @@
+deploy login:
+demo@demo.com    (also used in dev env)
+password123
+
+test@test.com
+test123
+
+roger@roger.com  (also dev env)
+roger
+
+
 Component Structure:
 - CocktailDetail is individual cocktail page
 - CocktailItem is the info component that is used in Dashboard and CocktailDetail

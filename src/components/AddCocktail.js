@@ -57,7 +57,7 @@ class AddCocktail extends Component {
                 id="cocktail_name"
                 type="text"
                 name="cocktail_name"
-                placeholder="Gin and Tonic, Aviation, Manhattan..."
+                placeholder="Old Fashioned, Aviation, Manhattan..."
                 required
               />
             </div>
