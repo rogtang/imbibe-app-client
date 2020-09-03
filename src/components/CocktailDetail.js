@@ -25,7 +25,7 @@ class CocktailDetail extends Component {
     return (
       <section className="postDetail">
         <CocktailItem key={post_id} {...drink} />
-              <button type="button" onClick={this.handleClickCancel}>Cancel</button>
+              <button type="button" onClick={this.handleClickCancel}>Back to Menu</button>
               
       </section>
     );
