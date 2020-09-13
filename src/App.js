@@ -14,7 +14,6 @@ import PublicOnlyRoute from "./utils/PublicOnlyRoute";
 import PostApiService from "./services/post-api-service";
 import PostsContext from "./contexts/PostsContext";
 import AuthenticationContext from "./contexts/AuthenticationContext";
-import TokenService from "./services/token-service";
 
 export const findDrink = (drinks = [], post_id) =>
   drinks.find((post) => post.id === post_id);
