@@ -8,4 +8,5 @@ const PostsContext = React.createContext({
   deleteDrink: () => {},
 })
 
+
 export default PostsContext

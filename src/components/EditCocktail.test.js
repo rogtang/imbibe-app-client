@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CocktailDetail from './CocktailDetail';
+import EditCocktail from './EditCocktail';
 import { BrowserRouter } from 'react-router-dom';
 
 
-it.only('renders without crashing', () => {
+it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <BrowserRouter>
-        <CocktailDetail />
+        <EditCocktail />
       </BrowserRouter>,
       div
     );

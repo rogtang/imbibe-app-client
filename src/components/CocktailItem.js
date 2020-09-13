@@ -38,7 +38,7 @@ class CocktailItem extends Component {
       strTags,
       strCategory,
       strGlass,
-      strInstructions,
+      strinstructions,
       strDrinkThumb,
       strIngredient1,
       strIngredient2,
@@ -141,7 +141,7 @@ class CocktailItem extends Component {
               {meas7}
             </ul>
             <div className="cocktail-item-body cocktail-detail">
-              <strong>Instructions:</strong> {strInstructions}
+              <strong>Instructions:</strong> {strinstructions}
             </div>
             <div className="cocktail-item-body cocktail-detail">
               <strong>Notes:</strong> {usernotes}

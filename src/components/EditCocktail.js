@@ -19,7 +19,7 @@ class EditCocktail extends Component {
     strCategory: "",
     strIBA: "",
     strGlass: "",
-    strInstructions: "",
+    strinstructions: "",
     strDrinkThumb: "",
     strIngredient1: "",
     strIngredient2: "",
@@ -58,7 +58,8 @@ class EditCocktail extends Component {
           strCategory: responseData.strCategory,
           strIBA: responseData.strIBA,
           strGlass: responseData.strGlass,
-          strInstructions: responseData.strInstructions,
+          //maybe try responseData.strinstructions
+          strinstructions: responseData.strinstructions,
           strDrinkThumb: responseData.strDrinkThumb,
           strIngredient1: responseData.strIngredient1,
           strIngredient2: responseData.strIngredient2,
@@ -84,7 +85,7 @@ class EditCocktail extends Component {
       });
   }
   handleChangeInstructions = (e) => {
-    this.setState({ strInstructions: e.target.value });
+    this.setState({ strinstructions: e.target.value });
   };
 
   handleChangeUsernotes = (e) => {
@@ -107,7 +108,7 @@ class EditCocktail extends Component {
       strCategory,
       strIBA,
       strGlass,
-      strInstructions,
+      strinstructions,
       strDrinkThumb,
       strIngredient1,
       strIngredient2,
@@ -135,7 +136,7 @@ class EditCocktail extends Component {
       strCategory,
       strIBA,
       strGlass,
-      strInstructions,
+      strinstructions,
       strDrinkThumb,
       strIngredient1,
       strIngredient2,
@@ -186,7 +187,7 @@ class EditCocktail extends Component {
       strCategory: newFields.strCategory || "",
       strIBA: newFields.strIBA || "",
       strGlass: newFields.strGlass || "",
-      strInstructions: newFields.strInstructions || "",
+      strinstructions: newFields.strinstructions || "",
       strDrinkThumb: newFields.strDrinkThumb || "",
       strIngredient1: newFields.strIngredient1 || "",
       strIngredient2: newFields.strIngredient2 || "",
@@ -216,7 +217,7 @@ class EditCocktail extends Component {
       error,
       id,
       strDrink,
-      strInstructions,
+      strinstructions,
       strDrinkThumb,
       usernotes,
       rating,
@@ -252,7 +253,7 @@ class EditCocktail extends Component {
                 name="user-instructions"
                 rows="10"
                 placeholder="Custom instructions go here..."
-                value={strInstructions || ""}
+                value={strinstructions || ""}
                 onChange={this.handleChangeInstructions}
               ></textarea>
             </div>

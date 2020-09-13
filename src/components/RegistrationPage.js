@@ -21,7 +21,7 @@ class RegistrationPage extends Component {
         value: "",
         touched: false,
       },
-      error: "",
+      error: null,
     };
   }
 
@@ -71,18 +71,16 @@ class RegistrationPage extends Component {
       })
       .catch((res) => {
         this.setState({ error: res.error });
-        alert(
-          "Sorry, that email is already used. Please try a different email."
-        );
+        
       });
   };
 
   validateUsername() {
     const username = this.state.username.value.trim();
     if (username.length === 0) {
-      return "Please enter your email address";
+      return <p className='input-error'>Please enter your an email address </p>
     } else if (username.length < 5) {
-      return "Email must be at least 5 characters long";
+      return <p className='input-error'>Email address must be at least 5 characters long</p>
     }
   }
 
@@ -90,10 +88,13 @@ class RegistrationPage extends Component {
     const password = this.state.password.value.trim();
     if (password.length === 0) {
       return "Password is required";
+    } else if (password.length < 5) {
+      return <p className='input-error'>Password must be between 5 - 72 characters long</p>
     }
   }
 
   render() {
+    const { error } = this.state;
     return (
       <div className="register-wrapper">
         <div className="register">
@@ -104,14 +105,13 @@ class RegistrationPage extends Component {
               className="RegistrationForm"
               onSubmit={this.handleSubmit}
             >
-              <h2 className="register-header">Register</h2>
               <div className="register__form__credentials">
                 <label htmlFor="RegistrationForm__username">
-                  Email address:{" "}
+                  Register with an email address:{" "}
                 </label>
                 <input
-                  type="text"
-                  placeholder="Enter your email address"
+                  type="email"
+                  placeholder="Must be at least 5 characters..."
                   name="username"
                   id="RegistrationForm__username"
                   onChange={(e) => this.updateUsername(e.target.value)}
@@ -120,10 +120,10 @@ class RegistrationPage extends Component {
                 {this.state.username.touched && (
                   <ValidationError message={this.validateUsername()} />
                 )}
-                <label htmlFor="RegistrationForm__password">Password: </label>
+                <label htmlFor="RegistrationForm__password">Choose a password: </label>
                 <input
                   type="password"
-                  placeholder="Choose a password"
+                  placeholder="Must be at least 5 characters..."
                   name="password"
                   id="RegistrationForm__password"
                   onChange={(e) => this.updatePassword(e.target.value)}
@@ -142,6 +142,11 @@ class RegistrationPage extends Component {
               </div>
             </form>
           </div>
+          <div className="EditPost__error" role="alert">
+          {error && (
+            <p>Could not create account, please make sure your email and/or password is valid.</p>
+          )}
+        </div>
         </div>
       </div>
     );

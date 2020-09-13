@@ -103,13 +103,12 @@ class LoginPage extends Component {
               className="LoginForm"
               onSubmit={this.handleSubmitJwtAuth}
             >
-              <h2 className="login-header">Login</h2>
               <div className="login__form__credentials">
                 <label
                   className="login_register_label"
                   htmlFor="LoginForm__username"
                 >
-                  Enter your email/username:
+                  Enter your email address:
                 </label>
                 <input
                   type="text"
@@ -132,7 +131,7 @@ class LoginPage extends Component {
                   type="password"
                   placeholder="Password"
                   name="password"
-                  id="password"
+                  id="LoginForm__password"
                   onChange={(e) => this.updatePassword(e.target.value)}
                   required
                 />

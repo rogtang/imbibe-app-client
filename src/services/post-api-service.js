@@ -7,9 +7,17 @@ const PostApiService = {
       headers: {
         authorization: `bearer ${TokenService.getAuthToken()}`,
       },
-    }).then((res) =>
-      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
-    );
+    }).then((res) => {
+      console.log(res);
+      if (res.ok) {
+        return res.json();
+      } else if (res.status === 401) {
+        return res.json().then((e) => {
+          console.log(e);
+          throw new Error(e)
+        });
+      }
+    });
   },
 
   searchDrink(search_drink) {
@@ -21,7 +29,7 @@ const PostApiService = {
       },
     }).then((res) =>
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
-      );
+    );
   },
 
   deletePost(post_id) {

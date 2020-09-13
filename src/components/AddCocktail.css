@@ -21,8 +21,8 @@
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)
     ) url('../images/hanging-glasses.jpg');
-    color: rgb(208, 255, 0);
-    opacity: 1;
+    color: white;
+    opacity: .9;
     height: 100%
   }
   
