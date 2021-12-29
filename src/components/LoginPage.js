@@ -147,7 +147,7 @@ class LoginPage extends Component {
                 />
               </div>
               <p className="test-login-credentials">
-                Please use demo@demo.com and demo1 to demo the site.
+                Please use demo@demo.com and password: demo1 to demo the site.
               </p>
             </form>
           </div>
