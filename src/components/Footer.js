@@ -10,7 +10,7 @@ export default function Footer() {
         rel="noopener noreferrer"
       >
         <img
-          src="https://image.flaticon.com/icons/svg/25/25231.svg"
+          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
           alt="github logo"
           className="social"
         />
@@ -21,7 +21,7 @@ export default function Footer() {
         rel="noopener noreferrer"
       >
         <img
-          src="https://image.flaticon.com/icons/svg/732/732200.svg"
+          src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-email-advertising-kiranshastry-solid-kiranshastry-1.png"
           alt="email icon"
           className="social"
         />
@@ -32,7 +32,7 @@ export default function Footer() {
         rel="noopener noreferrer"
       >
         <img
-          src="https://image.flaticon.com/icons/svg/49/49068.svg"
+          src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg"
           alt="linked-in logo"
           className="social"
         />
@@ -40,17 +40,15 @@ export default function Footer() {
       <div className="footer-credit">
         Icons made by{" "}
         <a
-          href="https://www.flaticon.com/authors/pixel-perfect"
-          title="Pixel perfect"
+          href="https://www.github.com/"
+          title="Github"
         >
-          Pixel perfect
-        </a>{" "} and 
-        <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-        {" "} Freepik
-        </a>{" "}
-        from{" "}
-        <a href="https://www.flaticon.com/" title="Flaticon">
-          www.flaticon.com
+          GitHub
+        </a>{" "}, {" "}
+        <a href="https://icons8.com/icon/P0tX6ToLZPNj/email">Email icon by Icons8</a>{" "}
+        and {" "}
+        <a href="https://www.linkedin.com/" title="linkedin">
+          LinkedIn
         </a>
       </div>
     </div>
